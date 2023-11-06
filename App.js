@@ -5,15 +5,20 @@ import CalendarScreen from "./src/screens/CalendarScreen";
 import AnalysisScreen from "./src/screens/AnalysisScreen";
 import SettingsScreen from "./src/screens/SettingsScreen";
 import JournalScreen from "./src/screens/JournalScreen";
+import JournalDrawer from "./src/screens/JournalDrawer";
 import { AntDesign } from "@expo/vector-icons";
+import { View } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { BottomDrawerMethods } from "react-native-animated-bottom-drawer";
 const Tab = createBottomTabNavigator();
 
 // Keep the splash screen visible while fetching resources from AsyncStorage
 // SplashScreen.preventAutoHideAsync();
 
 export default function App() {
+	const bottomDrawerRef = useRef(BottomDrawerMethods);
+
 	// const { user, setUser, weight, setWeight, date, setDate, week, setWeek, appIsReady } = useLoadUserData();
 
 	// useEffect(() => {
@@ -28,13 +33,39 @@ export default function App() {
 	// 	checkDataLoaded();
 	// }, [appIsReady]);
 
-	const loadOptions = ({ tabBarLabel, iconName }) => {
+	const handlePress = () => ({
+		tabPress: (e) => {
+			e.preventDefault();
+			bottomDrawerRef.current.open();
+		},
+	});
+
+	const loadOptions = ({ tabBarLabel, iconName, custom = false }) => {
 		return {
 			tabBarLabel,
 			headerShown: false,
 			tabBarActiveTintColor: "black",
 			tabBarInactiveTintColor: "lightgrey",
-			tabBarIcon: ({ focused }) => <AntDesign name={iconName} size={21} color={focused ? "black" : "silver"} />,
+
+			tabBarIcon: ({ focused }) => {
+				return custom ? (
+					<View
+						style={{
+							position: "absolute",
+							bottom: 0,
+							height: 40,
+							width: 40,
+							borderRadius: 40,
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+					>
+						<AntDesign name={iconName} size={40} color={focused ? "black" : "silver"} />
+					</View>
+				) : (
+					<AntDesign name={iconName} size={21} color={focused ? "black" : "silver"} />
+				);
+			},
 		};
 	};
 	return (
@@ -46,7 +77,7 @@ export default function App() {
 				<Tab.Screen name="Analysis" options={loadOptions({ tabBarLabel: "Analysis", iconName: "areachart" })}>
 					{(props) => <AnalysisScreen {...props} />}
 				</Tab.Screen>
-				<Tab.Screen name="Journal" options={loadOptions({ tabBarLabel: "", iconName: "pluscircle" })}>
+				<Tab.Screen name="Journal" options={loadOptions({ tabBarLabel: "", iconName: "pluscircle", custom: true })} listeners={handlePress}>
 					{(props) => <JournalScreen {...props} />}
 				</Tab.Screen>
 				<Tab.Screen name="Stats" options={loadOptions({ tabBarLabel: "Calendar", iconName: "calendar" })}>
@@ -56,6 +87,7 @@ export default function App() {
 					{(props) => <SettingsScreen {...props} />}
 				</Tab.Screen>
 			</Tab.Navigator>
+			<JournalDrawer bottomDrawerRef={bottomDrawerRef} />
 		</NavigationContainer>
 	);
 }
