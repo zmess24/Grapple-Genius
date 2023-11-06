@@ -1,8 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "./src/screens/HomeScreen/Index";
-import HistoryScreen from "./src/screens/HistoryScreen";
-import StatsScreen from "./src/screens/StatsScreen";
+import CalendarScreen from "./src/screens/CalendarScreen";
+import AnalysisScreen from "./src/screens/AnalysisScreen";
+import SettingsScreen from "./src/screens/SettingsScreen";
+import JournalScreen from "./src/screens/JournalScreen";
 import { AntDesign } from "@expo/vector-icons";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
@@ -41,11 +43,17 @@ export default function App() {
 				<Tab.Screen name="Home" options={loadOptions({ tabBarLabel: "Home", iconName: "home" })}>
 					{(props) => <HomeScreen {...props} />}
 				</Tab.Screen>
-				<Tab.Screen name="History" options={loadOptions({ tabBarLabel: "History", iconName: "calendar" })}>
-					{(props) => <HistoryScreen {...props} />}
+				<Tab.Screen name="Analysis" options={loadOptions({ tabBarLabel: "Analysis", iconName: "areachart" })}>
+					{(props) => <AnalysisScreen {...props} />}
 				</Tab.Screen>
-				<Tab.Screen name="Stats" options={loadOptions({ tabBarLabel: "History", iconName: "areachart" })}>
-					{(props) => <StatsScreen {...props} />}
+				<Tab.Screen name="Journal" options={loadOptions({ tabBarLabel: "", iconName: "pluscircle" })}>
+					{(props) => <JournalScreen {...props} />}
+				</Tab.Screen>
+				<Tab.Screen name="Stats" options={loadOptions({ tabBarLabel: "Calendar", iconName: "calendar" })}>
+					{(props) => <CalendarScreen {...props} />}
+				</Tab.Screen>
+				<Tab.Screen name="Settings" options={loadOptions({ tabBarLabel: "Settings", iconName: "setting" })}>
+					{(props) => <SettingsScreen {...props} />}
 				</Tab.Screen>
 			</Tab.Navigator>
 		</NavigationContainer>
