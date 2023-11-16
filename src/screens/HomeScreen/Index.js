@@ -2,20 +2,24 @@ import React from "react";
 import { Text, View } from "react-native";
 import tw from "twrnc";
 import Profile from "../../components/Profile";
+import Stats from "./components/Stats";
 import moment from "moment";
 
 function HomeScreen() {
 	return (
-		<View style={tw.style("flex flex-col justify-between grow bg-white pl-6 pr-6 pt-15")}>
-			<View style={tw.style("flex flex-col items-start")}>
-				<Text style={tw.style("text-xl font-bold tracking-tight text-gray-400")}>Week</Text>
-				<Text style={tw.style("text-3xl font-bold tracking-tight")}>06 March</Text>
+		<View style={tw.style("flex flex-col grow bg-white px-6 pt-15")}>
+			<View style={tw.style("flex flex-col items-start mb-5")}>
+				{/* <Text style={tw.style("text-xl font-bold tracking-tight text-gray-400")}>Activity</Text> */}
 			</View>
-			<View style={tw.style("flex flex-col items-start")}>
+			<View style={tw.style("flex flex-col items-start mb-5")}>
 				<Profile />
 			</View>
-			<View style={tw.style("flex flex-col items-start")}>
-				<Text style={tw.style("text-xl font-bold tracking-tight")}>Recent Activity</Text>
+			<View style={tw.style("flex flex-col items-start mb-5")}>
+				<Text style={tw.style("text-base font-semibold leading-6 text-gray-900")}>Progress</Text>
+				<Stats />
+			</View>
+			<View style={tw.style("flex flex-col items-start mb-5")}>
+				<Text style={tw.style("text-base font-semibold leading-6 text-gray-900")}>Recent Activity</Text>
 			</View>
 		</View>
 	);
