@@ -9,7 +9,7 @@ function ActivityItem({ person: { item } }) {
 	};
 
 	return (
-		<View key={item.email} style={tw.style("flex flex-row grow justify-between py-2 border-2 border-red-200")}>
+		<View key={item.email} style={tw.style("flex flex-row grow justify-between py-2")}>
 			{/* <View style={tw.style("flex min-w-0 gap-x-4")}>
 				<Image style={tw.style("h-6 w-6 flex-none rounded-full bg-gray-50")} src={item.imageUrl} />
 				<View style={tw.style("min-w-0 flex-auto")}>
@@ -19,7 +19,7 @@ function ActivityItem({ person: { item } }) {
 			</View> */}
 			<View style={tw.style("flex flex-row gap-x-2")}>
 				<Image style={tw.style("mx-auto h-8 w-8 rounded-full mr-2")} src={item.imageUrl} />
-				<View style={tw.style("mx-auto align-middle")}>
+				<View style={tw.style("mx-auto")}>
 					<Text style={tw.style("text-xs font-bold text-gray-900")}>{item.name}</Text>
 					<Text style={tw.style("text-xs font-medium text-gray-600")}>BELT HERE</Text>
 				</View>
