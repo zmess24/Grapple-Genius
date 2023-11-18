@@ -16,11 +16,11 @@ function HomeScreen() {
 				<Profile />
 			</View>
 			<View style={tw.style("flex flex-col w-90 mb-5")}>
-				<Text style={tw.style("text-base font-semibold leading-6 text-gray-900")}>Progress</Text>
+				<Text style={tw.style("text-base font-semibold text-gray-900")}>Progress</Text>
 				<Stats />
 			</View>
 			<View style={tw.style("flex flex-col w-90 mb-5")}>
-				<Text style={tw.style("text-base font-semibold text-gray-900")}>Recent Activity</Text>
+				<Text style={tw.style("text-base font-semibold text-gray-900 mb-3")}>Recent Activity</Text>
 				<ActivityList />
 			</View>
 		</View>
