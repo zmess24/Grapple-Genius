@@ -8,6 +8,13 @@ function ActivityItem({ person: { item } }) {
 		console.log("Pressed!");
 	};
 
+	const parseDate = (date) => {
+		let currentDate = moment();
+		let journalDate = moment(date);
+		let difference = currentDate.diff(journalDate, "days");
+		return difference < 7 ? moment(date).fromNow() : moment(date).format("ll");
+	};
+
 	return (
 		<View key={item.email} style={tw.style("flex flex-row grow justify-between py-2 items-center")}>
 			<View style={tw.style("flex flex-row gap-x-3 items-center")}>
@@ -15,7 +22,7 @@ function ActivityItem({ person: { item } }) {
 				<Text style={tw.style("text-sm font-bold text-gray-900")}>{item.type}</Text>
 			</View>
 			<View style={tw.style("flex flex-col items-center align-end")}>
-				<Text style={tw.style("text-sm text-gray-600")}>{item.date}</Text>
+				<Text style={tw.style("text-sm text-gray-500")}>{parseDate(item.date)}</Text>
 			</View>
 		</View>
 	);

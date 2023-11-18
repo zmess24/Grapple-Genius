@@ -10,8 +10,7 @@ const people = [
 		role: "Co-Founder / CEO",
 		imageUrl:
 			"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		date: "Nov 17th, 2023",
-		lastSeenDateTime: "2023-01-23T13:23Z",
+		date: "2023-11-18",
 	},
 	{
 		type: "Class",
@@ -19,8 +18,7 @@ const people = [
 		role: "Co-Founder / CTO",
 		imageUrl:
 			"https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		date: "Nov 16th, 2023",
-		lastSeenDateTime: "2023-01-23T13:23Z",
+		date: "2023-11-17",
 	},
 	{
 		type: "Class",
@@ -28,7 +26,7 @@ const people = [
 		role: "Business Relations",
 		imageUrl:
 			"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		date: "Nov 14, 2023",
+		date: "2023-11-16",
 	},
 	{
 		type: "Class",
@@ -36,8 +34,7 @@ const people = [
 		role: "Front-end Developer",
 		imageUrl:
 			"https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		date: "Nov 13th, 2023",
-		lastSeenDateTime: "2023-01-23T13:23Z",
+		date: "2023-11-15",
 	},
 	{
 		type: "Competition",
@@ -45,8 +42,7 @@ const people = [
 		role: "Designer",
 		imageUrl:
 			"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		date: "Nov 12th, 2023",
-		lastSeenDateTime: "2023-01-23T13:23Z",
+		date: "2023-11-14",
 	},
 	{
 		type: "Private",
@@ -54,7 +50,39 @@ const people = [
 		role: "Director of Product",
 		imageUrl:
 			"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		date: "Nov 7th, 2023",
+		date: "2023-11-13",
+	},
+	{
+		type: "Class",
+		email: "lindsay.walton@example.com",
+		role: "Front-end Developer",
+		imageUrl:
+			"https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+		date: "2023-11-12",
+	},
+	{
+		type: "Class",
+		email: "lindsay.walton@example.com",
+		role: "Front-end Developer",
+		imageUrl:
+			"https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+		date: "2023-11-11",
+	},
+	{
+		type: "Class",
+		email: "lindsay.walton@example.com",
+		role: "Front-end Developer",
+		imageUrl:
+			"https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+		date: "2023-11-10",
+	},
+	{
+		type: "Class",
+		email: "lindsay.walton@example.com",
+		role: "Front-end Developer",
+		imageUrl:
+			"https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+		date: "2023-11-09",
 	},
 ];
 
